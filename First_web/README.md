@@ -1,2 +1,112 @@
-Here's a `README.md` file for a Spring project that performs basic arithmetic operations (addition, subtraction, multiplication, and division). It also includes instructions for running the project using Maven:\n\n```markdown\n# Spring Arithmetic API\n\nThis is a simple Spring Boot application that performs basic arithmetic operations (addition, subtraction, multiplication, and division). The API accepts JSON requests with two numbers and a specified operation.\n\n## Request Format\n\nThe request body should be in the following format:\n\n```json\n{\n    \"num1\": <number1>,\n    \"num2\": <number2>,\n    \"calculation\": \"<operation>\"\n}\n```\n\n### Available Operations:\n- `add`: Adds `num1` and `num2`\n- `sub`: Subtracts `num2` from `num1`\n- `mul`: Multiplies `num1` by `num2`\n- `div`: Divides `num1` by `num2` (returns error if `num2` is 0)\n\n## Example Request\n\n### Addition Example:\n```json\n{\n    \"num1\": 10,\n    \"num2\": 5,\n    \"calculation\": \"add\"\n}\n```\n\n### Response:\n```json\n{\n    \"result\": 15\n}\n```\n\n### Division Example:\n```json\n{\n    \"num1\": 10,\n    \"num2\": 2,\n    \"calculation\": \"div\"\n}\n```\n\n### Response:\n```json\n{\n    \"result\": 5\n}\n```\n\n## Running the Application\n\n### Prerequisites\n\n- [Java 11 or later](https://adoptopenjdk.net/)\n- [Maven](https://maven.apache.org/)\n\n### Steps to Run:\n\n1. Clone the repository:\n   ```bash\n   git clone <repository-url>\n   cd <project-directory>\n   ```\n\n2. Build the project:\n   ```bash\n   mvn clean install\n   ```\n\n3. Run the application using Maven:\n   ```bash\n   mvn spring-boot:run\n   ```\n\n4. The application will start on the default port `8080`.\n\n## API Endpoints\n\n- `POST /api/calculate`\n  - Body: JSON object with `num1`, `num2`, and `calculation`\n  - Response: JSON object with the result of the calculation.\n\nExample cURL command to test the API:\n\n```bash\ncurl -X POST http://localhost:8080/api/calculate \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"num1\": 10, \"num2\": 5, \"calculation\": \"add\"}'\n```\n\nThis will return:\n\n```json\n{\n    \"result\": 15\n}\n```\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n```\n\nThis `README.md` provides an overview of how to use the API, examples of requests and responses, and how to run the Spring Boot application. Let me know if you need any adjustments or further details!
+# Spring Arithmetic API
+
+This is a simple Spring Boot application that performs basic arithmetic operations (addition, subtraction, multiplication, and division). The API accepts JSON requests with two numbers and a specified operation.
+
+## Request Format
+
+The request body should be in the following format:
+
+```json
+{
+    "num1": <number1>,
+    "num2": <number2>,
+    "calculation": "<operation>"
+}
+```
+
+### Available Operations:
+- `add`: Adds `num1` and `num2`
+- `sub`: Subtracts `num2` from `num1`
+- `mul`: Multiplies `num1` by `num2`
+- `div`: Divides `num1` by `num2` (returns error if `num2` is 0)
+
+## Example Request
+
+### Addition Example:
+```json
+{
+    "num1": 10,
+    "num2": 5,
+    "calculation": "add"
+}
+```
+
+### Response:
+```json
+{
+    "result": 15
+}
+```
+
+### Division Example:
+```json
+{
+    "num1": 10,
+    "num2": 2,
+    "calculation": "div"
+}
+```
+
+### Response:
+```json
+{
+    "result": 5
+}
+```
+
+## Running the Application
+
+### Prerequisites
+
+- [Java 11 or later](https://adoptopenjdk.net/)
+- [Maven](https://maven.apache.org/)
+
+### Steps to Run:
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
+   ```
+
+2. Build the project:
+   ```bash
+   mvn clean install
+   ```
+
+3. Run the application using Maven:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+4. The application will start on the default port `8080`.
+
+## API Endpoints
+
+- `POST /api/calculate`
+  - Body: JSON object with `num1`, `num2`, and `calculation`
+  - Response: JSON object with the result of the calculation.
+
+Example cURL command to test the API:
+
+```bash
+curl -X POST http://localhost:8080/api/calculate 
+  -H "Content-Type: application/json" 
+  -d '{"num1": 10, "num2": 5, "calculation": "add"}'
+```
+
+This will return:
+
+```json
+{
+    "result": 15
+}
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+This `README.md` provides an overview of how to use the API, examples of requests and responses, and how to run the Spring Boot application. Let me know if you need any adjustments or further details!
 
