@@ -61,7 +61,7 @@ The request body should be in the following format:
 - [Java 11 or later](https://adoptopenjdk.net/)
 - [Maven](https://maven.apache.org/)
 
-### Steps to Run:
+### Steps to Start API:
 
 1. Clone the repository:
    ```bash
@@ -80,6 +80,20 @@ The request body should be in the following format:
    ```
 
 4. The application will start on the default port `8080`.
+
+### Steps to Run Web_UI:
+
+1. Clone the repository:
+   ```bash
+   cd <project-directory>
+   ```
+
+2. Build the project:
+   ```bash
+	python3 -m http.server 5500
+   ```
+
+3. The application will start on the default port `5500` (http://localhost:5500).
 
 ## API Endpoints
 
