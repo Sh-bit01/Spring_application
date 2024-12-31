@@ -8,8 +8,8 @@ The request body should be in the following format:
 
 ```json
 {
-    "num1": <number1>,
-    "num2": <number2>,
+    "num1": 45,
+    "num2": 74,
     "calculation": "<operation>"
 }
 ```
@@ -106,7 +106,7 @@ This will return:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+
 
 This `README.md` provides an overview of how to use the API, examples of requests and responses, and how to run the Spring Boot application. Let me know if you need any adjustments or further details!
 
